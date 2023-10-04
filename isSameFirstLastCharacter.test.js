@@ -19,14 +19,20 @@ test("it should return false when the first and last character are different", (
 // Edge Cases
 // A test case for a string with only 2 characters that are different
 test("it should return false when the string is two letters, which are diff", () => {
-   expect(isSameFirstLastCharacter(ab)).toBe(false);
+   expect(isSameFirstLastCharacter("ab")).toBe(false);
 });
 
 // A test case for a string with only 2 characters that are the same
-test("", () => {});
+test("it should return true when the string is two letters, which are the same", () => {
+   expect(isSameFirstLastCharacter("aa")).toBe(true);
+});
 
 // A test case for a string with only 1 character
-test("", () => {});
+test("it should return true when the string is one letter (the first and last are the same)", () => {
+   expect(isSameFirstLastCharacter("a")).toBe(true);
+});
 
 // A test case for an empty string
-test("", () => {});
+test("it should return false because there are no letters to check", () => {
+   expected(isSameFirstLastCharacter("")).toBe(false);
+});
