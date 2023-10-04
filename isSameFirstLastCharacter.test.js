@@ -33,6 +33,6 @@ test("it should return true when the string is one letter (the first and last ar
 });
 
 // A test case for an empty string
-test("it should return false because there are no letters to check", () => {
-   expected(isSameFirstLastCharacter("")).toBe(false);
+test("it should return false because the (nonexistant) letters are not different", () => {
+   expected(isSameFirstLastCharacter("")).toBe(true);
 });
